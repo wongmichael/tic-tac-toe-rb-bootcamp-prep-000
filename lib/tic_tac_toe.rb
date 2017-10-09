@@ -72,7 +72,8 @@ end
 
 def winner(board)
   if won?(board)!=false
-    return board[won?(board).first]
+    board[won?(board).first]
+  else
+    false
   end
-  return nil
 end
