@@ -72,6 +72,6 @@ end
 
 def winner(board)
   if !won?(board).nil?
-    won?(board).first
+    won?(board)[0]
   end
 end
