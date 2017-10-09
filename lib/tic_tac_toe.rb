@@ -54,4 +54,24 @@ def current_player(board)
 end
 
 def won?(board)
-  WIN_COMBINATIONS.detect { |combo|  }
+  WIN_COMBINATIONS.detect { |combo| board[combo[0]]==board[combo[1]] && board[combo[1]]==board[combo[2]] }
+end
+
+def full?(board)
+  board.all?{|x|x=="X"||x=="O"}
+end
+
+def draw?(board)
+  !won?(board) && full?(board)
+end
+
+def over?(board)
+  draw?(board) || won?(board) || full?(board)
+end
+
+def winner(board)
+  if won?(board)!=false
+    won?(board).first
+  end
+end
+
