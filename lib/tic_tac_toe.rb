@@ -74,4 +74,3 @@ def winner(board)
     won?(board).first
   end
 end
-
