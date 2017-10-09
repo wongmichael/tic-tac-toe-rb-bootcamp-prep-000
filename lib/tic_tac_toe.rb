@@ -74,8 +74,8 @@ def winner(board)
   #if won?(board)!=false && !won?(board).nil?
   #  board[won?(board).first]
   #end
-  #if won?(board).kind_of?(Array)
-  #  board[won?(board).first]
-  #end
-  won?(board)
+  if won?(board).kind_of?(Array)
+    board[won?(board).first]
+  end
+  #won?(board)
 end
