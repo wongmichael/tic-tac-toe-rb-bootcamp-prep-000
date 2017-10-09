@@ -76,5 +76,7 @@ def winner(board)
   #end
   if won?(board).kind_of?(Array)
     board[won?(board).first]
+  else
+    nil
   end
 end
