@@ -36,7 +36,7 @@ end
 
 def turn(board)
   puts "move 1-9 please"
-  input = gets.chomp
+  input = gets.chomp.to_i
   index = input - 1
   if valid_move?(board,index)
     move(board,index,current_player(board))
