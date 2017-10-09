@@ -79,3 +79,14 @@ def winner(board)
   end
   #won?(board)
 end
+
+def play
+  until over?(board)
+    turn(board)
+  end
+  if won?(board)
+    puts `winner #{winner(board)}`
+  elsif draw?(board)
+    puts `draw!`
+  end
+end
