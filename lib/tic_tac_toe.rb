@@ -39,7 +39,7 @@ def turn(board)
   input = gets.chomp
   index = input - 1
   if valid_move?(board,index)
-    move(board,index,current_player)
+    move(board,index,current_player(board))
     display_board(board)
   else
     turn(board)
